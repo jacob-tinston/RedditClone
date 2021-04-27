@@ -11,9 +11,14 @@ const SearchBar = () => {
 
     const fetchData = async (e) => {
         e.preventDefault();
-        const data = await fetch(`https://www.reddit.com/r/${searchTerm}.json`);
-        const response = await data.json();
-        console.log(response.data.children);
+        try {
+            const data = await fetch(`https://www.reddit.com/r/${searchTerm}.json`);
+            const response = await data.json();
+            console.log(response.data.children);
+        } catch(err) {
+            window.alert(`Sorry! Could not find results for '${searchTerm}', please enter a valid search term...`);
+            console.log(err);
+        };
     }
 
     return (
