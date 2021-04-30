@@ -7,11 +7,19 @@ const PostList = () => {
     const searchResults = useSelector(selectSearchResults)
 
     return (
-        <div classname="postlist">
+        <div className="postlist">
             {
                 searchResults.map(result => {
                     return (
-                        <Post />
+                        <Post 
+                          author={result.author}
+                          numComments={result.num_comments}
+                          downs={result.downs}
+                          ups={result.ups}
+                          url={result.url}
+                          title={result.title}
+                          subreddit={result.subreddit}
+                        />
                     );
                 })
             }
