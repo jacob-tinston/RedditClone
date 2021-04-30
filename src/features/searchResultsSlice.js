@@ -8,6 +8,9 @@ export const searchResultsSlice = createSlice({
     reducers: {
         addSearchResults(state, action) {
             state.searchResults.push(action.payload);
+        },
+        removeSearchResults(state) {
+            state.searchResults = [];
         }
     }
 });
@@ -15,4 +18,4 @@ export const searchResultsSlice = createSlice({
 export const selectSearchResults = state => {
     return state.searchResults.searchResults;
 }
-export const { addSearchResults } = searchResultsSlice.actions;
+export const { addSearchResults, removeSearchResults } = searchResultsSlice.actions;
