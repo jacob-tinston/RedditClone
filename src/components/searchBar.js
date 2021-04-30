@@ -1,21 +1,28 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { search, selectSearchTerm } from '../features/searchBarSlice';
-import { addSearchResults } from '../features/searchResultsSlice';
+import { addSearchResults, removeSearchResults } from '../features/searchResultsSlice';
 import store from '../App/store'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 const SearchBar = () => {
-    const searchTerm = useSelector(selectSearchTerm)
+    const searchTerm = useSelector(selectSearchTerm);
+
+    useEffect(() => {
+        fetchData();
+    }, [])
 
     const handleChange = ({ target }) => {
         store.dispatch(search(target.value))
-    }
+    };
 
     const fetchData = async (e) => {
-        e.preventDefault();
+        if(e) {
+          e.preventDefault();
+        }
         try {
+            store.dispatch(removeSearchResults());
             const data = await fetch(`https://www.reddit.com/r/${searchTerm}.json`);
             const json = await data.json();
             const response = await json.data.children;
@@ -26,7 +33,7 @@ const SearchBar = () => {
             window.alert(`Sorry! Could not find results for '${searchTerm}', please enter a valid search term...`);
             console.log(err);
         };
-    }
+    };
 
     return (
         <nav>
@@ -45,7 +52,7 @@ const SearchBar = () => {
                 {<FontAwesomeIcon id="down" icon={faCaretDown} />}
             </div>
         </nav>
-    )
+    );
 };
 
 export default SearchBar;
