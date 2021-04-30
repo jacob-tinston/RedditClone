@@ -5,7 +5,6 @@ const Post = (props) => {
     const numComments = props.numComments;
     const downs = props.downs;
     const ups = props.ups;
-    const url = props.url;
     const title = props.title;
     const subreddit = props.subreddit
 
@@ -17,7 +16,6 @@ const Post = (props) => {
             <h4>numComments: {numComments}</h4>
             <h4>Downs: {downs}</h4>
             <h4>Ups: {ups}</h4>
-            <a href={url} target="_blank" rel="noreferrer">{url}</a>
         </div>
     );
 };
