@@ -22,9 +22,10 @@ nav {
     width: 100%;
     position: fixed;
     box-shadow: 5px;
+    z-index: 10;
 }
 
-.logo {
+.logo1 {
     width: 7.5%;
     height: 7.5%;
     margin: 0.6% 9% 0.6% 1.75%;
@@ -112,4 +113,20 @@ input:focus {
     margin-top: 0.5%;
     color: darkgray;
     margin-left: 1%;
+}
+
+/* POSTS */
+
+.postlist {
+    position: absolute;
+    top: 10%;
+    width: 77%;
+    margin-left: 11.5%;
+}
+
+.post {
+    background-color: #fff;
+    margin-top: 2%;
+    padding: 3%;
+    border-radius: 5px;
 }
