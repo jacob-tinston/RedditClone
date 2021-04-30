@@ -31,6 +31,10 @@ nav {
     margin: 0.6% 9% 0.6% 1.75%;
 }
 
+.logo2 {
+    display: none;
+}
+
 .searchbar {
     display: flex;
     border-radius: 5px;
@@ -129,4 +133,70 @@ input:focus {
     margin-top: 2%;
     padding: 3%;
     border-radius: 5px;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) and (min-width: 200px) {
+    /* NAVBAR */
+
+    .logo1,
+    .login,
+    .signup {
+        display: none;
+    }
+
+    .logo2 {
+        display: block;
+        width: 20%;
+        height: 20%;
+    }
+
+    .searchbar {
+        width: 60%;
+        margin-top: 2.5%;
+    }
+
+    input {
+        width: 85%;
+    }
+
+    .account {
+        margin-left: 5%;
+        margin-top: 2.5%;
+    }
+
+    /* POSTS */
+
+    .postlist {
+        top: 8%;
+        width: 94%;
+        margin-left: 3%;
+    }
+
+    .post {
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    /* NAVBAR */
+
+    .searchbar {
+        margin-top: 1.5%;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .account {
+        margin-top: 1%;
+    }
+
+    /* POSTS */
+
+    .postlist {
+        top: 7%;
+    }
 }
