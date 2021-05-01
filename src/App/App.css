@@ -134,6 +134,11 @@ input:focus {
     background-color: #fff;
     margin-top: 2%;
     border-radius: 5px;
+    border: 1px solid #fff
+}
+
+.post:hover {
+    border: 1px solid #878a8c;
 }
 
 .ups-container {
@@ -296,6 +301,21 @@ a:hover {
     .post {
         margin-top: 5%;
     }
+
+    .ups-container {
+        margin-right: 6.5%;
+    }
+
+    .join {
+        width: 4rem;
+        height: 1.3rem;
+        font-size: 0.75rem;
+    }
+
+    .bottom-buttons {
+        margin-left: 3%;
+        padding: 2% 1%;
+    }
 }
 
 @media only screen and (max-width: 350px) {
@@ -317,6 +337,15 @@ a:hover {
 
     .postlist {
         top: 7%;
+        width: 94%;
+    }
+
+    .ups-container {
+        margin-right: 9%;
+    }
+
+    .join {
+        display: none;
     }
 }
 
