@@ -200,3 +200,29 @@ input:focus {
         top: 7%;
     }
 }
+
+/* TABLET */
+
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+    /* NAVBAR */
+
+    .logo1 {
+        width: 10%;
+        margin-right: 5%;
+        margin-top: 1%;
+    }
+
+    .searchbar {
+        width: 50%;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .login {
+        margin-left: 2%;
+    }
+}
