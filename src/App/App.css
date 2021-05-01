@@ -10,6 +10,7 @@ html, body {
     font-size: 16px;
     width: 100%;
     font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
     background-color: #dae0e6;
 }
 
@@ -44,7 +45,7 @@ nav {
 }
 
 label {
-    color: darkgray;
+    color: #878a8c;
     margin: 0 0.5rem;
 }
 
@@ -115,7 +116,7 @@ input:focus {
     height: 2.2rem;
     width: 2.3rem;
     margin-top: 0.5%;
-    color: darkgray;
+    color: #878a8c;
     margin-left: 1%;
 }
 
@@ -129,10 +130,128 @@ input:focus {
 }
 
 .post {
+    display: flex;
     background-color: #fff;
     margin-top: 2%;
-    padding: 3%;
     border-radius: 5px;
+}
+
+.ups-container {
+    width: 3%;
+    height: 100%;
+    margin-right: 3%;
+}
+
+h6 {
+    margin-left: 22.5%;
+}
+
+#uparrow {
+    box-sizing: content-box;
+    margin-left: 35%;
+    margin-top: 35%;
+    padding: 4px;
+    border-radius: 5px;
+    color: #878a8c;
+}
+
+#uparrow:hover,
+#uparrow:active {
+    color: #cc3700;
+    background-color: lightgray;
+}
+
+#downarrow {
+    box-sizing: content-box;
+    margin-left: 35%;
+    margin-top: 5%;
+    padding: 4px;
+    border-radius: 5px;
+    color: #878a8c;
+}
+
+#downarrow:hover,
+#downarrow:active {
+    color: #0079d3;
+    background-color: lightgray;
+}
+
+.info-container {
+    width: 100%;
+}
+
+.topbar-container {
+    display: flex;
+}
+
+.topbar {
+    display: flex;
+    margin-top: 1%;
+    width: 100%;
+}
+
+a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    margin-right: 1%;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.author {
+    color: #878a8c;
+    font-size: 0.7rem;
+    margin-top: 0.1%;
+}
+
+.join {
+    background-color: #0079d3;
+    color: #fff;
+    width: 3.8rem;
+    margin-top: 1%;
+    margin-right: 1%;
+    height: 1.5rem;
+    border: 1px solid #0079d3;
+    border-radius: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.join:hover {
+    background-color: #288eda;
+}
+
+#plus {
+    height: 55%;
+}
+
+.bottombar {
+    display: flex;
+    width: 100%;
+}
+
+.bottom-buttons {
+    border: 0;
+    background-color: #fff;
+    margin-right: 0.5%;
+    color: #878a8c;
+    padding: 1% 1%;
+    font-size: 0.8rem;
+
+}
+
+.bottom-buttons:hover {
+    background-color: lightgray;
+}
+
+.comment {
+    white-space: nowrap;
+}
+
+#commenticon {
+    margin-right: 5%;
 }
 
 /* MOBILE */
