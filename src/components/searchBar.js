@@ -29,6 +29,11 @@ const SearchBar = () => {
             for(let key = 0; key <= response.length - 1; key++) {
                 store.dispatch(addSearchResults(response[key].data));
             }
+            if(searchTerm === 'Popular') {
+                document.title = 'reddit clone';
+            } else {
+                document.title = `reddit clone: ${searchTerm}`;
+            }
         } catch(err) {
             window.alert(`Sorry! Could not find results for '${searchTerm}', please enter a valid search term...`);
             console.log(err);
