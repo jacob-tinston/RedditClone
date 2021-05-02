@@ -23,9 +23,10 @@ const SearchBar = () => {
         }
         try {
             store.dispatch(removeSearchResults());
-            const data = await fetch(`https://www.reddit.com/r/${searchTerm}.json`);
+            const data = await fetch(`https://www.reddit.com/search.json?q=${searchTerm}`);
             const json = await data.json();
             const response = await json.data.children;
+            console.log(response);
             for(let key = 0; key <= response.length - 1; key++) {
                 store.dispatch(addSearchResults(response[key].data));
             }
